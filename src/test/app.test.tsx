@@ -17,7 +17,7 @@ function visit(path: string, authenticated = false) {
             name: "Maya Chen",
             email: "maya@example.com",
             company: "Northstar Capital",
-            plan: "Team",
+            plan: "Professional",
           },
         }
       : { token: null, user: null },

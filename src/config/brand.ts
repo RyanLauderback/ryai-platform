@@ -11,6 +11,7 @@ import {
 export type PricingTier = {
   name: string;
   price: string;
+  cadence?: string;
   description: string;
   cta: string;
   featured?: boolean;
@@ -38,8 +39,8 @@ export const brand = {
   },
   nav: [
     { label: "Platform", href: "/#platform" },
+    { label: "Solutions", href: "/#solutions" },
     { label: "Pricing", href: "/pricing" },
-    { label: "Security", href: "/#security" },
   ],
   hero: {
     eyebrow: "Decision intelligence, reimagined",
@@ -90,15 +91,17 @@ export const brand = {
     {
       name: "Starter",
       price: "$49",
+      cadence: "/user/mo",
       description: "For individual analysts moving faster.",
       cta: "Start free",
       features: ["1 seat", "250 AI queries / month", "Core market sources", "CSV export"],
     },
     {
-      name: "Team",
+      name: "Professional",
       price: "$149",
+      cadence: "/user/mo",
       description: "For research teams building shared conviction.",
-      cta: "Start team trial",
+      cta: "Start professional trial",
       featured: true,
       features: [
         "Up to 10 seats",

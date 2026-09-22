@@ -15,7 +15,7 @@ const makeUser = (email: string): User => ({
   name: email.startsWith("demo") ? "Maya Chen" : email.split("@")[0] || "Analyst",
   email,
   company: "Northstar Capital",
-  plan: "Team",
+  plan: "Professional",
 });
 
 export const useAuthStore = create<AuthState>()(

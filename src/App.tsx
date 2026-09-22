@@ -4,9 +4,9 @@ import { RequireAuth } from "@/components/RequireAuth";
 import { ConsoleLayout } from "@/layouts/ConsoleLayout";
 import { PublicLayout } from "@/layouts/PublicLayout";
 import { queryClient } from "@/lib/query-client";
+import { Landing } from "@/marketing/Landing";
+import { Pricing } from "@/marketing/Pricing";
 import { AuthPage } from "@/pages/AuthPage";
-import { LandingPage } from "@/pages/LandingPage";
-import { PricingPage } from "@/pages/PricingPage";
 import { AnalyticsPage } from "@/pages/app/AnalyticsPage";
 import { AssistantPage } from "@/pages/app/AssistantPage";
 import { DashboardPage } from "@/pages/app/DashboardPage";
@@ -20,8 +20,8 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<PublicLayout />}>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Route>
           <Route path="/login" element={<AuthPage mode="login" />} />
           <Route path="/signup" element={<AuthPage mode="signup" />} />
@@ -35,7 +35,7 @@ export function App() {
               <Route path="settings" element={<SettingsPage />} />
             </Route>
           </Route>
-          <Route path="*" element={<LandingPage />} />
+          <Route path="*" element={<Landing />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
