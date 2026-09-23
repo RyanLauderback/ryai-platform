@@ -14,7 +14,9 @@ export function Hero() {
       <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-[-0.04em] text-ink sm:text-6xl">
         {brand.hero.title}
       </h1>
-      <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">{brand.tagline}</p>
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+        {brand.hero.subcopy}
+      </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Button size="lg" asChild data-testid="hero-cta">
           <Link to="/signup">
