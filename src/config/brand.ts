@@ -45,7 +45,8 @@ export const brand = {
   hero: {
     eyebrow: "Decision intelligence, reimagined",
     title: "From fragmented signals to confident strategy.",
-    primaryCta: "Start exploring",
+    subcopy: "Every answer ships with citations, giving you an auditable source trail.",
+    primaryCta: "Start free trial",
     secondaryCta: "View pricing",
   },
   modules: [
@@ -97,11 +98,11 @@ export const brand = {
       features: ["1 seat", "250 AI queries / month", "Core market sources", "CSV export"],
     },
     {
-      name: "Professional",
+      name: "Pro",
       price: "$149",
       cadence: "/user/mo",
       description: "For research teams building shared conviction.",
-      cta: "Start professional trial",
+      cta: "Start Pro trial",
       featured: true,
       features: [
         "Up to 10 seats",
