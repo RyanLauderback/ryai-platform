@@ -27,3 +27,7 @@ npm run test:e2e
 ```
 
 Keep components focused, route all dynamic data through MSW handlers, preserve stable `data-testid` selectors used by tests, and centralize branded copy in `src/config/brand.ts`.
+
+Use `camelCase` for variables, parameters, and ordinary functions. Use `PascalCase`
+for React components, destructured component values such as `Icon`, and type-like
+declarations. ESLint enforces these naming conventions during the quality gate.

@@ -17,6 +17,27 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          selector: "typeLike",
+          format: ["PascalCase"],
+        },
+        {
+          selector: "function",
+          format: ["camelCase", "PascalCase"],
+        },
+        {
+          selector: "variable",
+          format: ["camelCase", "PascalCase", "UPPER_CASE"],
+          leadingUnderscore: "allowSingleOrDouble",
+        },
+        {
+          selector: "parameter",
+          format: ["camelCase"],
+          leadingUnderscore: "allowSingleOrDouble",
+        },
+      ],
     },
   },
   prettier,
