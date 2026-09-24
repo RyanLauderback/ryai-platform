@@ -33,7 +33,10 @@ export function SettingsPage() {
       <PageHeader title="Settings" description="Manage your profile, workspace, plan, and interface." />
       <Tabs.Root defaultValue="profile" className="grid gap-5 lg:grid-cols-[220px_1fr]">
         <Tabs.List className="flex gap-2 overflow-x-auto rounded-xl border bg-white p-2 lg:flex-col">
-          {tabs.map(({ value, label, icon: Icon }) => <Tabs.Trigger key={value} value={value} className="flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-500 data-[state=active]:bg-brand-50 data-[state=active]:text-brand-700"><Icon className="h-4 w-4" />{label}</Tabs.Trigger>)}
+          {tabs.map(({ value, label, icon: iconComponent }) => {
+            const IconComponent = iconComponent;
+            return <Tabs.Trigger key={value} value={value} className="flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-500 data-[state=active]:bg-brand-50 data-[state=active]:text-brand-700"><IconComponent className="h-4 w-4" />{label}</Tabs.Trigger>;
+          })}
         </Tabs.List>
         <div>
           <Tabs.Content value="profile"><SettingsCard title="Profile information" description="Update your personal information and email."><div className="grid gap-4 sm:grid-cols-2"><label className="text-sm font-medium">Full name<Input className="mt-1.5" defaultValue={user?.name ?? ""} /></label><label className="text-sm font-medium">Email<Input className="mt-1.5" type="email" defaultValue={user?.email ?? ""} /></label><label className="text-sm font-medium">Job title<Input className="mt-1.5" defaultValue="VP, Strategy" /></label><label className="text-sm font-medium">Timezone<Input className="mt-1.5" defaultValue="America/New_York" /></label></div><Button className="mt-6">Save changes</Button></SettingsCard></Tabs.Content>

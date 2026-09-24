@@ -41,18 +41,21 @@ export function DashboardPage() {
         description="Here is what is happening across your intelligence workspace."
       />
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        {cards.map(({ label, value, change, icon: Icon }) => (
-          <Card key={label}>
-            <CardContent>
-              <div className="flex items-center justify-between">
-                <div className="grid h-9 w-9 place-items-center rounded-lg bg-brand-50 text-brand-600"><Icon className="h-4 w-4" /></div>
-                <span className="text-xs font-semibold text-emerald-600">{change}</span>
-              </div>
-              <p className="mt-4 text-2xl font-bold">{value}</p>
-              <p className="mt-1 text-xs text-slate-500">{label} · last 30 days</p>
-            </CardContent>
-          </Card>
-        ))}
+        {cards.map(({ label, value, change, icon: iconComponent }) => {
+          const IconComponent = iconComponent;
+          return (
+            <Card key={label}>
+              <CardContent>
+                <div className="flex items-center justify-between">
+                  <div className="grid h-9 w-9 place-items-center rounded-lg bg-brand-50 text-brand-600"><IconComponent className="h-4 w-4" /></div>
+                  <span className="text-xs font-semibold text-emerald-600">{change}</span>
+                </div>
+                <p className="mt-4 text-2xl font-bold">{value}</p>
+                <p className="mt-1 text-xs text-slate-500">{label} · last 30 days</p>
+              </CardContent>
+            </Card>
+          );
+        })}
       </div>
       <div className="mt-5 grid gap-5 xl:grid-cols-[1.5fr_1fr]">
         <Card>
@@ -77,13 +80,16 @@ export function DashboardPage() {
           <CardContent>
             <h2 className="font-bold">Recent activity</h2>
             <div className="mt-4 divide-y">
-              {activity.map(({ title, detail, time, icon: Icon }) => (
-                <div className="flex gap-3 py-4" key={detail}>
-                  <div className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-slate-100"><Icon className="h-3.5 w-3.5 text-slate-600" /></div>
-                  <div className="min-w-0"><p className="text-sm font-semibold">{title}</p><p className="truncate text-xs text-slate-500">{detail}</p></div>
-                  <span className="ml-auto whitespace-nowrap text-[11px] text-slate-400">{time}</span>
-                </div>
-              ))}
+              {activity.map(({ title, detail, time, icon: iconComponent }) => {
+                const IconComponent = iconComponent;
+                return (
+                  <div className="flex gap-3 py-4" key={detail}>
+                    <div className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-slate-100"><IconComponent className="h-3.5 w-3.5 text-slate-600" /></div>
+                    <div className="min-w-0"><p className="text-sm font-semibold">{title}</p><p className="truncate text-xs text-slate-500">{detail}</p></div>
+                    <span className="ml-auto whitespace-nowrap text-[11px] text-slate-400">{time}</span>
+                  </div>
+                );
+              })}
             </div>
           </CardContent>
         </Card>

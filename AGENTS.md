@@ -30,6 +30,10 @@ all data from fixtures in `src/mocks/data.ts`.
   by fixtures (`src/mocks/data.ts`). Never add real network calls or secrets.
 - **Test selectors**: interactive elements carry stable `data-testid` attributes. Update
   tests in the same commit as the change they cover.
+- **Naming**: use `camelCase` for variables, parameters, and non-component functions;
+  use `PascalCase` for React components, destructured component values such as
+  `Icon`, and type-like declarations. Immutable constants may use `UPPER_CASE` when
+  that convention improves readability. ESLint enforces these naming conventions.
 - **Deep documentation**: `droid-wiki/` explains the codebase. Start with
   `droid-wiki/how-to-contribute/` for workflow detail and `droid-wiki/features/` for
   per-area behavior.

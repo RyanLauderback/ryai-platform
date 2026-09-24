@@ -38,23 +38,26 @@ export function ConsoleLayout() {
         </button>
       </div>
       <nav className="flex-1 space-y-1 p-3" aria-label="Console navigation">
-        {navigation.map(({ label, href, icon: Icon, end }) => (
-          <NavLink
-            key={href}
-            to={href}
-            end={end}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-400 transition hover:bg-white/10 hover:text-white",
-                isActive && "bg-white/10 text-white",
-              )
-            }
-          >
-            <Icon className="h-4 w-4" />
-            {label}
-          </NavLink>
-        ))}
+        {navigation.map(({ label, href, icon: iconComponent, end }) => {
+          const IconComponent = iconComponent;
+          return (
+            <NavLink
+              key={href}
+              to={href}
+              end={end}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                cn(
+                  "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-400 transition hover:bg-white/10 hover:text-white",
+                  isActive && "bg-white/10 text-white",
+                )
+              }
+            >
+              <IconComponent className="h-4 w-4" />
+              {label}
+            </NavLink>
+          );
+        })}
       </nav>
       <div className="border-t border-white/10 p-4">
         <div className="mb-3 flex items-center gap-3">
