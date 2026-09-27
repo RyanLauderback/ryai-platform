@@ -18,7 +18,7 @@ export const handlers = [
       name: "Maya Chen",
       email: "demo@corvex.example",
       company: "Northstar Capital",
-      plan: "Pro",
+      plan: "Professional",
     }),
   ),
   http.get("/api/usage", () => HttpResponse.json(usage)),
