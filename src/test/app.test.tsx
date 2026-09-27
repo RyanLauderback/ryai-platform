@@ -17,7 +17,7 @@ function visit(path: string, authenticated = false) {
             name: "Maya Chen",
             email: "maya@example.com",
             company: "Northstar Capital",
-            plan: "Professional",
+            plan: "Pro",
           },
         }
       : { token: null, user: null },
@@ -28,11 +28,21 @@ function visit(path: string, authenticated = false) {
 describe("public experience and auth", () => {
   it("uses centralized brand copy across the marketing landing page", () => {
     visit("/");
-    expect(screen.getByText(brand.tagline)).toBeInTheDocument();
+    expect(screen.getByText(brand.hero.subcopy)).toBeInTheDocument();
+    expect(screen.getByTestId("hero-cta")).toHaveTextContent("Start free trial");
+    expect(screen.getByTestId("hero-cta")).toHaveAttribute("href", "/signup");
     expect(screen.getAllByText(brand.product).length).toBeGreaterThan(0);
     for (const module of brand.modules)
       expect(screen.getAllByText(module.title).length).toBeGreaterThan(0);
-    expect(screen.getByTestId("hero-cta")).toHaveAttribute("href", "/signup");
+    for (const tier of brand.pricing)
+      expect(screen.getByText(tier.name)).toBeInTheDocument();
+  });
+
+  it("uses the aligned pricing tier labels on the pricing page", () => {
+    visit("/pricing");
+    expect(screen.getByText("Starter")).toBeInTheDocument();
+    expect(screen.getByText("Pro")).toBeInTheDocument();
+    expect(screen.getByText("Enterprise")).toBeInTheDocument();
   });
 
   it("guards console routes and supports demo authentication", async () => {

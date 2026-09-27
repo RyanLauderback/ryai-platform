@@ -1,8 +1,10 @@
 import { expect, test } from "@playwright/test";
+import { brand } from "../src/config/brand";
 
 test("landing to complete console workflow", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByText("One platform for market intelligence. Search, reason, decide.")).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(brand.hero.title);
+  await expect(page.getByTestId("hero-cta")).toContainText(brand.hero.primaryCta);
   await page.getByRole("link", { name: "Log in" }).first().click();
   await page.getByTestId("demo-login").click();
   await expect(page.getByTestId("dashboard-page")).toBeVisible();
