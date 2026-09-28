@@ -6,7 +6,7 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist", "coverage", "playwright-report", "test-results", "public/mockServiceWorker.js"] },
+  { ignores: ["dist", "coverage", "playwright-report", "test-results", "public/mockServiceWorker.js", "corvex-edgar/", "voxledger-transcripts/", "pulsewire-news/", "ledgerline-private/"] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {

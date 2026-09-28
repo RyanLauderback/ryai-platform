@@ -7,3 +7,14 @@ test-results
 .DS_Store
 *.log
 .factory/
+
+# Legacy ingestion backends: build output and caches (wrapper jars and lockfiles stay tracked)
+target/
+build/
+.gradle/
+.venv/
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
