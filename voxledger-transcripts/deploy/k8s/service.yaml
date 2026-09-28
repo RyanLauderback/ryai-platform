@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: voxledger-code-location
+  namespace: voxledger
+  labels:
+    app.kubernetes.io/part-of: voxledger-transcripts
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: voxledger-code-location
+  ports:
+    - name: grpc
+      port: 3030
+      targetPort: grpc

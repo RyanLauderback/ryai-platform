@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voxledger-code-location
+  namespace: voxledger
+  labels:
+    app.kubernetes.io/part-of: voxledger-transcripts
+    app.kubernetes.io/name: voxledger-code-location
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: voxledger-code-location
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: voxledger-code-location
+    spec:
+      serviceAccountName: voxledger-worker
+      containers:
+        - name: dagster-code-location
+          image: us-central1-docker.pkg.dev/corvex-prod/voxledger/transcripts:3.4.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: grpc
+              containerPort: 3030
+          envFrom:
+            - configMapRef:
+                name: voxledger-transcripts-config
+          readinessProbe:
+            tcpSocket:
+              port: grpc
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
