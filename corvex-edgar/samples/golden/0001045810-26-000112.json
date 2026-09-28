@@ -1,0 +1,43 @@
+{
+  "filing" : {
+    "accession_no" : "0001045810-26-000112",
+    "cik" : "0001045810",
+    "company_name" : "NVIDIA CORP",
+    "form_type" : "10-Q",
+    "period_of_report" : "2026-07-26",
+    "filed_date" : "2026-08-27",
+    "fiscal_year" : 2027,
+    "fiscal_period" : "Q2",
+    "raw_uri" : "s3://corvex-edgar-raw/0001045810/0001045810-26-000112.txt",
+    "ingest_batch_id" : "edgar-20260927-01"
+  },
+  "filing_section" : [ {
+    "accession_no" : "0001045810-26-000112",
+    "seq" : 1,
+    "section_code" : "PART_I_ITEM_1",
+    "section_title" : "Financial Statements",
+    "char_count" : 364,
+    "text" : "Item 1. Financial Statements\n\nThe condensed consolidated balance sheets as of July 26, 2026 and January 25, 2026, and the\nrelated condensed consolidated statements of income for the quarter then ended, are included\nherein. These statements are unaudited and reflect all adjustments that management considers\nnecessary for a fair statement of the periods presented."
+  }, {
+    "accession_no" : "0001045810-26-000112",
+    "seq" : 2,
+    "section_code" : "PART_I_ITEM_2",
+    "section_title" : "Management's Discussion and Analysis of Financial Condition and Results of Operations",
+    "char_count" : 597,
+    "text" : "Item 2. Management's Discussion and Analysis of Financial Condition and Results of Operations\n\nRevenue for the second quarter of fiscal 2027 was 41.3 billion, up 19 percent from a year\nearlier, driven by demand for accelerated computing platforms across cloud and sovereign\ncustomers. Data center revenue grew 24 percent year over year, while gaming revenue was\nroughly flat. Gross margin was 71.2 percent, down 40 basis points sequentially on product\nmix. Operating expenses rose as the company ramped production of its next-generation\naccelerators and expanded its systems software organization."
+  }, {
+    "accession_no" : "0001045810-26-000112",
+    "seq" : 3,
+    "section_code" : "PART_I_ITEM_3",
+    "section_title" : "Quantitative and Qualitative Disclosures About Market Risk",
+    "char_count" : 435,
+    "text" : "Item 3. Quantitative and Qualitative Disclosures About Market Risk\n\nThe company is exposed to interest rate risk on its investment portfolio and to foreign\ncurrency exchange risk on sales denominated in currencies other than the U.S. dollar. A\nhypothetical 10 percent movement in exchange rates would not have a material impact on\nresults. There were no material changes to the market risk disclosures in the most recent\nannual report."
+  }, {
+    "accession_no" : "0001045810-26-000112",
+    "seq" : 4,
+    "section_code" : "PART_II_ITEM_1A",
+    "section_title" : "Risk Factors",
+    "char_count" : 458,
+    "text" : "Item 1A. Risk Factors\n\nSupply of advanced packaging capacity remains concentrated among a small number of vendors,\nand any disruption could delay shipments of the company's data center products. Export\ncontrol regulations continue to evolve, and additional restrictions could reduce addressable\ndemand in certain regions. Customer concentration also remains elevated, with the top four\ncloud customers representing a significant share of data center revenue."
+  } ]
+}

@@ -1,0 +1,60 @@
+<SEC-DOCUMENT>0000789019-26-000041.txt : 20260729
+<SEC-HEADER>0000789019-26-000041.hdr.sgml : 20260729
+ACCESSION NUMBER:		0000789019-26-000041
+CONFORMED SUBMISSION TYPE:	10-K
+FILED AS OF DATE:		20260729
+CONFORMED PERIOD OF REPORT:	20260630
+
+FILER:
+
+	COMPANY DATA:
+		COMPANY CONFORMED NAME:			MICROSOFT CORP
+		CENTRAL INDEX KEY:			0000789019
+		STANDARD INDUSTRIAL CLASSIFICATION:	SERVICES-PREPACKAGED SOFTWARE [7372]
+		FISCAL YEAR END:			0630
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>10-K
+<SEQUENCE>1
+<FILENAME>msft-20260630x10k.htm
+<TEXT>
+
+PART I
+
+Item 1. Business
+
+The company develops and supports software, services, devices, and solutions worldwide. Its
+segments include productivity and business processes, intelligent cloud, and more personal
+computing. During fiscal 2026 the company continued to invest in cloud infrastructure and in
+applied artificial intelligence across its product families, and it completed the build-out
+of three additional datacenter regions.
+
+Item 1A. Risk Factors
+
+The company's cloud services depend on the availability of datacenter capacity, electricity,
+and networking, and capacity constraints could limit growth. Competition in productivity
+software and in cloud infrastructure remains intense. Regulatory proceedings in several
+jurisdictions could result in fines or changes to business practices, and evolving rules on
+the export of artificial intelligence services add compliance complexity.
+
+PART II
+
+Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations
+
+Revenue for fiscal 2026 was 288.4 billion, an increase of 14 percent over fiscal 2025,
+reflecting growth in cloud services and in subscription productivity offerings. Operating
+income grew 16 percent as gross margin expansion in the cloud segment offset continued
+infrastructure investment. The company returned 38 billion to shareholders through dividends
+and share repurchases during the year.
+
+Item 8. Financial Statements and Supplementary Data
+
+The consolidated financial statements, together with the report of the independent
+registered public accounting firm, are included herein, including the consolidated balance
+sheets as of June 30, 2026 and 2025 and the related statements of income, comprehensive
+income, cash flows, and stockholders' equity for each of the three years ended June 30,
+2026.
+
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

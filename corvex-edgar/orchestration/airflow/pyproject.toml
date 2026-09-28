@@ -1,0 +1,25 @@
+[project]
+name = "corvex-edgar-orchestration"
+version = "8.2.0"
+description = "Airflow DAGs for the Corvex EDGAR filings batch pipeline"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff==0.16.9",
+    "mypy==2.3.1",
+]
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "stubs"
+files = ["dags"]
+strict = true
+
+[tool.ruff]
+target-version = "py312"
+extend-exclude = [".venv", "stubs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]

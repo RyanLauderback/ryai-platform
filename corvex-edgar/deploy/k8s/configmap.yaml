@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edgar-config
+  namespace: corvex-edgar
+  labels:
+    app.kubernetes.io/part-of: corvex-edgar
+data:
+  EDGAR_JDBC_URL: jdbc:postgresql://edgar-db.internal:5432/edgar
+  EDGAR_JDBC_USER: edgar
+  EDGAR_RAW_PREFIX: s3a://corvex-edgar-raw
+  EDGAR_RAW_BUCKET: corvex-edgar-raw
+  EDGAR_AWS_REGION: us-east-1
+  EDGAR_CLAIM_TTL: PT15M

@@ -1,0 +1,29 @@
+{
+  "filing" : {
+    "accession_no" : "0001318605-26-000077",
+    "cik" : "0001318605",
+    "company_name" : "TESLA, INC.",
+    "form_type" : "8-K",
+    "period_of_report" : "2026-09-15",
+    "filed_date" : "2026-09-16",
+    "fiscal_year" : 2026,
+    "fiscal_period" : "Q3",
+    "raw_uri" : "s3://corvex-edgar-raw/0001318605/0001318605-26-000077.txt",
+    "ingest_batch_id" : "edgar-20260927-01"
+  },
+  "filing_section" : [ {
+    "accession_no" : "0001318605-26-000077",
+    "seq" : 1,
+    "section_code" : "ITEM_8_01",
+    "section_title" : "Other Events",
+    "char_count" : 452,
+    "text" : "Item 8.01 Other Events\n\nOn September 15, 2026, the registrant announced that its energy storage deployments for the\nthird quarter reached a record level, and that construction of its second grid-scale battery\nfactory remains on schedule for initial production in early 2027. The registrant also\nannounced a planned expansion of its charging network along two additional interstate\ncorridors. The press release is furnished as an exhibit to this report."
+  }, {
+    "accession_no" : "0001318605-26-000077",
+    "seq" : 2,
+    "section_code" : "ITEM_9_01",
+    "section_title" : "Financial Statements and Exhibits",
+    "char_count" : 233,
+    "text" : "Item 9.01 Financial Statements and Exhibits\n\nThe following exhibit is furnished with this current report: Exhibit 99.1, press release\ndated September 15, 2026, announcing energy storage deployment results and network\nexpansion plans."
+  } ]
+}

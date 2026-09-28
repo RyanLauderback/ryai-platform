@@ -1,0 +1,43 @@
+{
+  "filing" : {
+    "accession_no" : "0000789019-26-000041",
+    "cik" : "0000789019",
+    "company_name" : "MICROSOFT CORP",
+    "form_type" : "10-K",
+    "period_of_report" : "2026-06-30",
+    "filed_date" : "2026-07-29",
+    "fiscal_year" : 2026,
+    "fiscal_period" : "FY",
+    "raw_uri" : "s3://corvex-edgar-raw/0000789019/0000789019-26-000041.txt",
+    "ingest_batch_id" : "edgar-20260927-01"
+  },
+  "filing_section" : [ {
+    "accession_no" : "0000789019-26-000041",
+    "seq" : 1,
+    "section_code" : "PART_I_ITEM_1",
+    "section_title" : "Business",
+    "char_count" : 425,
+    "text" : "Item 1. Business\n\nThe company develops and supports software, services, devices, and solutions worldwide. Its\nsegments include productivity and business processes, intelligent cloud, and more personal\ncomputing. During fiscal 2026 the company continued to invest in cloud infrastructure and in\napplied artificial intelligence across its product families, and it completed the build-out\nof three additional datacenter regions."
+  }, {
+    "accession_no" : "0000789019-26-000041",
+    "seq" : 2,
+    "section_code" : "PART_I_ITEM_1A",
+    "section_title" : "Risk Factors",
+    "char_count" : 458,
+    "text" : "Item 1A. Risk Factors\n\nThe company's cloud services depend on the availability of datacenter capacity, electricity,\nand networking, and capacity constraints could limit growth. Competition in productivity\nsoftware and in cloud infrastructure remains intense. Regulatory proceedings in several\njurisdictions could result in fines or changes to business practices, and evolving rules on\nthe export of artificial intelligence services add compliance complexity."
+  }, {
+    "accession_no" : "0000789019-26-000041",
+    "seq" : 3,
+    "section_code" : "PART_II_ITEM_7",
+    "section_title" : "Management's Discussion and Analysis of Financial Condition and Results of Operations",
+    "char_count" : 490,
+    "text" : "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations\n\nRevenue for fiscal 2026 was 288.4 billion, an increase of 14 percent over fiscal 2025,\nreflecting growth in cloud services and in subscription productivity offerings. Operating\nincome grew 16 percent as gross margin expansion in the cloud segment offset continued\ninfrastructure investment. The company returned 38 billion to shareholders through dividends\nand share repurchases during the year."
+  }, {
+    "accession_no" : "0000789019-26-000041",
+    "seq" : 4,
+    "section_code" : "PART_II_ITEM_8",
+    "section_title" : "Financial Statements and Supplementary Data",
+    "char_count" : 408,
+    "text" : "Item 8. Financial Statements and Supplementary Data\n\nThe consolidated financial statements, together with the report of the independent\nregistered public accounting firm, are included herein, including the consolidated balance\nsheets as of June 30, 2026 and 2025 and the related statements of income, comprehensive\nincome, cash flows, and stockholders' equity for each of the three years ended June 30,\n2026."
+  } ]
+}
