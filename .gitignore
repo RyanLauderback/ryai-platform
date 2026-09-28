@@ -6,4 +6,6 @@ test-results
 .env
 .DS_Store
 *.log
-.factory/
+.factory/*
+!.factory/hooks.json
+!.factory/hooks/
