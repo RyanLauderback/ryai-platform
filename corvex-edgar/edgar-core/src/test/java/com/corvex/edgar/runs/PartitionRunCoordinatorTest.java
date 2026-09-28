@@ -7,7 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.time.Clock;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.ZoneId;
 import java.time.ZoneOffset;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,14 +19,17 @@ class PartitionRunCoordinatorTest {
 
   private static final Duration CLAIM_TTL = Duration.ofMinutes(15);
 
+  private MutableClock clock;
+  private RecordingMetrics metrics;
   private PartitionRunCoordinator coordinator;
 
   @BeforeEach
   void setUp() {
-    Clock clock = Clock.fixed(Instant.parse("2026-08-27T06:00:00Z"), ZoneOffset.UTC);
+    clock = new MutableClock(Instant.parse("2026-08-27T06:00:00Z"));
+    metrics = new RecordingMetrics();
     coordinator =
         new PartitionRunCoordinator(
-            new InMemoryClaimLedger(), new InMemoryWorkerRegistry(), CLAIM_TTL, clock);
+            new InMemoryClaimLedger(), new InMemoryWorkerRegistry(), CLAIM_TTL, clock, metrics);
   }
 
   @Test
@@ -80,32 +85,121 @@ class PartitionRunCoordinatorTest {
   }
 
   @Test
-  void recoveryWithNothingToReleaseReturnsZero() {
-    coordinator.createRun("run-4", List.of("p1"));
+  void recoveryAfterAbruptFailureReleasesClaimsWhoseHeartbeatExpired() {
+    coordinator.createRun("run-4", List.of("p1", "p2"));
     coordinator.registerWorker("w1");
     coordinator.claimNext("run-4", "w1");
+    // w1 dies abruptly: no clean shutdown, and its heartbeat is never refreshed.
+    clock.advanceBy(CLAIM_TTL.plusSeconds(1));
+
+    coordinator.registerWorker("w2");
+    assertEquals(1, coordinator.recoverOnStartup("w2"));
+
+    Optional<PartitionClaim> reclaimed = coordinator.claimNext("run-4", "w2");
+    assertTrue(reclaimed.isPresent());
+    assertEquals("p1", reclaimed.get().getPartitionKey());
+    assertEquals("w2", reclaimed.get().getWorkerId());
+    coordinator.complete("run-4", "p1", "w2");
+    coordinator.claimNext("run-4", "w2");
+    coordinator.complete("run-4", "p2", "w2");
+
+    assertEquals(RunStatus.SUCCEEDED, coordinator.status("run-4"));
+  }
+
+  @Test
+  void recoveryWithNothingToReleaseReturnsZero() {
+    coordinator.createRun("run-5", List.of("p1"));
+    coordinator.registerWorker("w1");
+    coordinator.claimNext("run-5", "w1");
 
     coordinator.registerWorker("w2");
     assertEquals(0, coordinator.recoverOnStartup("w2"));
   }
 
   @Test
+  void recoveryDoesNotReleaseClaimsWithFreshHeartbeats() {
+    coordinator.createRun("run-6", List.of("p1"));
+    coordinator.registerWorker("w1");
+    coordinator.claimNext("run-6", "w1");
+    clock.advanceBy(CLAIM_TTL.dividedBy(2));
+    coordinator.heartbeat("w1");
+    clock.advanceBy(CLAIM_TTL.dividedBy(2));
+
+    coordinator.registerWorker("w2");
+    assertEquals(0, coordinator.recoverOnStartup("w2"));
+    assertEquals(RunStatus.RUNNING, coordinator.status("run-6"));
+    assertTrue(metrics.queueStateDivergences.isEmpty());
+  }
+
+  @Test
   void stoppedWorkerCannotClaim() {
-    coordinator.createRun("run-5", List.of("p1"));
+    coordinator.createRun("run-7", List.of("p1"));
     coordinator.registerWorker("w1");
     coordinator.shutdownGracefully("w1");
 
-    assertThrows(IllegalStateException.class, () -> coordinator.claimNext("run-5", "w1"));
+    assertThrows(IllegalStateException.class, () -> coordinator.claimNext("run-7", "w1"));
   }
 
   @Test
   void heartbeatKeepsAClaimRunning() {
-    coordinator.createRun("run-6", List.of("p1"));
+    coordinator.createRun("run-8", List.of("p1"));
     coordinator.registerWorker("w1");
-    coordinator.claimNext("run-6", "w1");
+    coordinator.claimNext("run-8", "w1");
 
     coordinator.heartbeat("w1");
 
-    assertEquals(RunStatus.RUNNING, coordinator.status("run-6"));
+    assertEquals(RunStatus.RUNNING, coordinator.status("run-8"));
+  }
+
+  @Test
+  void statusRecordsQueueStateDivergenceWhilePartitionsStayClaimed() {
+    coordinator.createRun("run-9", List.of("p1", "p2"));
+    coordinator.registerWorker("w1");
+    coordinator.claimNext("run-9", "w1");
+
+    assertEquals(RunStatus.RUNNING, coordinator.status("run-9"));
+    assertTrue(metrics.queueStateDivergences.isEmpty());
+
+    clock.advanceBy(CLAIM_TTL.plusSeconds(1));
+    assertEquals(RunStatus.QUEUED, coordinator.status("run-9"));
+    assertEquals(List.of("run-9:1"), metrics.queueStateDivergences);
+  }
+
+  /** Clock that tests advance by hand to move heartbeats past their TTL. */
+  private static final class MutableClock extends Clock {
+    private Instant now;
+
+    private MutableClock(Instant start) {
+      this.now = start;
+    }
+
+    void advanceBy(Duration duration) {
+      now = now.plus(duration);
+    }
+
+    @Override
+    public Instant instant() {
+      return now;
+    }
+
+    @Override
+    public ZoneId getZone() {
+      return ZoneOffset.UTC;
+    }
+
+    @Override
+    public Clock withZone(ZoneId zone) {
+      return this;
+    }
+  }
+
+  /** Captures emitted metrics so tests can assert on them. */
+  private static final class RecordingMetrics implements RunMetrics {
+    private final List<String> queueStateDivergences = new ArrayList<>();
+
+    @Override
+    public void queueStateDivergence(String runId, int claimedPartitions) {
+      queueStateDivergences.add(runId + ":" + claimedPartitions);
+    }
   }
 }

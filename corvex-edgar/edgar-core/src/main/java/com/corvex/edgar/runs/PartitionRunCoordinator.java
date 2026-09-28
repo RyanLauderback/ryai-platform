@@ -10,8 +10,8 @@ import java.util.Optional;
 /**
  * Coordinates the partition claims of one ingest run across the worker fleet. Workers claim
  * partitions in run order, heartbeat while they work, and shut down gracefully when they drain;
- * on startup a worker calls {@link #recoverOnStartup(String)} to hand back work that a cleanly
- * stopped worker left claimed.
+ * on startup a worker calls {@link #recoverOnStartup(String)} to hand back work that a worker
+ * left behind, whether it stopped cleanly or died with an expired heartbeat.
  */
 public final class PartitionRunCoordinator {
 
@@ -19,13 +19,24 @@ public final class PartitionRunCoordinator {
   private final WorkerRegistry workers;
   private final Duration claimTtl;
   private final Clock clock;
+  private final RunMetrics metrics;
 
   public PartitionRunCoordinator(
       ClaimLedger ledger, WorkerRegistry workers, Duration claimTtl, Clock clock) {
+    this(ledger, workers, claimTtl, clock, RunMetrics.NOOP);
+  }
+
+  public PartitionRunCoordinator(
+      ClaimLedger ledger,
+      WorkerRegistry workers,
+      Duration claimTtl,
+      Clock clock,
+      RunMetrics metrics) {
     this.ledger = Objects.requireNonNull(ledger, "ledger");
     this.workers = Objects.requireNonNull(workers, "workers");
     this.claimTtl = Objects.requireNonNull(claimTtl, "claimTtl");
     this.clock = Objects.requireNonNull(clock, "clock");
+    this.metrics = Objects.requireNonNull(metrics, "metrics");
   }
 
   /** Registers a run; every partition starts QUEUED. */
@@ -61,14 +72,16 @@ public final class PartitionRunCoordinator {
   }
 
   /**
-   * Releases claims left behind by workers that announced a clean shutdown, so a fresh worker can
-   * reprocess them. Returns the number of claims released.
+   * Releases claims left behind by workers that can no longer make progress — those that
+   * announced a clean shutdown and those that died abruptly and let their heartbeat expire — so a
+   * fresh worker can reprocess them. Returns the number of claims released.
    */
   public int recoverOnStartup(String workerId) {
     workers.stateOf(workerId);
     int released = 0;
+    Instant now = clock.instant();
     for (PartitionClaim claim : ledger.claimsInState(ClaimState.CLAIMED)) {
-      if (workers.stateOf(claim.getWorkerId()) == WorkerState.STOPPED) {
+      if (holderCannotProgress(claim.getWorkerId(), now)) {
         ledger.release(claim.getRunId(), claim.getPartitionKey());
         released++;
       }
@@ -76,7 +89,23 @@ public final class PartitionRunCoordinator {
     return released;
   }
 
-  /** Rolls the partition claims of a run up to a single status. */
+  /**
+   * A holder can no longer progress when it stopped cleanly or when its heartbeat expired
+   * {@code claimTtl} ago; a worker with a fresh heartbeat keeps its claims.
+   */
+  private boolean holderCannotProgress(String holderId, Instant now) {
+    if (workers.stateOf(holderId) == WorkerState.STOPPED) {
+      return true;
+    }
+    Optional<Instant> heartbeat = workers.lastHeartbeat(holderId);
+    return heartbeat.isEmpty() || heartbeat.get().plus(claimTtl).isBefore(now);
+  }
+
+  /**
+   * Rolls the partition claims of a run up to a single status. When the roll-up reads QUEUED while
+   * partitions are still claimed, the queue state has diverged from what the workers are actually
+   * executing, and {@link RunMetrics} records it.
+   */
   public RunStatus status(String runId) {
     List<PartitionClaim> claims = ledger.claimsForRun(runId);
     boolean allCompleted = true;
@@ -97,6 +126,15 @@ public final class PartitionRunCoordinator {
           return RunStatus.RUNNING;
         }
       }
+    }
+    int claimedWhileQueued = 0;
+    for (PartitionClaim claim : claims) {
+      if (claim.getState() == ClaimState.CLAIMED) {
+        claimedWhileQueued++;
+      }
+    }
+    if (claimedWhileQueued > 0) {
+      metrics.queueStateDivergence(runId, claimedWhileQueued);
     }
     return RunStatus.QUEUED;
   }
