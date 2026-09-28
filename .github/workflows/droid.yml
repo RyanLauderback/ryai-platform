@@ -1,0 +1,39 @@
+# .github/workflows/droid.yml
+name: Droid Tag Response
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  droid:
+    runs-on: ubuntu-latest
+    if: |
+      (github.event.issue.pull_request && contains(github.event.comment.body, '@droid')) ||
+      (!github.event.issue.pull_request && contains(github.event.comment.body, '@droid'))
+    steps:
+      - name: Checkout repository (PR)
+        if: github.event.issue.pull_request
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.issue.pull_request.head.ref }}
+          repository: ${{ github.event.issue.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+
+      - name: Checkout repository (Issue)
+        if: ${{ !github.event.issue.pull_request }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Droid
+        uses: Factory-AI/droid-action@v8
+        with:
+          factory_api_key: ${{ secrets.FACTORY_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}

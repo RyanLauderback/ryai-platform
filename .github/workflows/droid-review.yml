@@ -1,0 +1,39 @@
+name: Droid Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  id-token: write
+
+concurrency:
+  group: droid-review-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      # continue-on-error: droid-action@v8 crashes with ENOENT on
+      # review_validated.json when a review validates to zero findings.
+      # With real findings the file is written and results post normally,
+      # so this only masks the broken empty-findings case.
+      - name: Run Droid
+        uses: Factory-AI/droid-action@v8
+        continue-on-error: true
+        with:
+          factory_api_key: ${{ secrets.FACTORY_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_review: true
+          review_depth: shallow
