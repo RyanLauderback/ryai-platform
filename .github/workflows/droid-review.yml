@@ -25,8 +25,13 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
+      # continue-on-error: droid-action@v8 crashes with ENOENT on
+      # review_validated.json when a review validates to zero findings.
+      # With real findings the file is written and results post normally,
+      # so this only masks the broken empty-findings case.
       - name: Run Droid
         uses: Factory-AI/droid-action@v8
+        continue-on-error: true
         with:
           factory_api_key: ${{ secrets.FACTORY_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
