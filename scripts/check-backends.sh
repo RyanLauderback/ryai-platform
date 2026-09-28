@@ -59,44 +59,48 @@ preflight() {
   esac
 }
 
+# NOTE: these functions run under `if`/`&&` conditions, which disables `set -e`
+# for their whole body (and an inner `set -e` does not re-enable it). Every step
+# is therefore chained with `&&` (or `|| exit 1`) so an early failing check
+# cannot be masked by a later passing one.
 run_edgar() {
   (
-    cd "$REPO_ROOT/corvex-edgar"
-    ./mvnw -B -q verify
-    cd "$REPO_ROOT/corvex-edgar/orchestration/airflow"
-    uv sync --frozen
-    uv run ruff check .
-    uv run mypy
+    cd "$REPO_ROOT/corvex-edgar" &&
+      ./mvnw -B -q verify &&
+      cd "$REPO_ROOT/corvex-edgar/orchestration/airflow" &&
+      uv sync --frozen &&
+      uv run ruff check . &&
+      uv run mypy
   )
 }
 
 run_voxledger() {
   (
-    cd "$REPO_ROOT/voxledger-transcripts"
-    uv sync --frozen
-    uv run ruff check .
-    uv run mypy
-    uv run pytest -q
+    cd "$REPO_ROOT/voxledger-transcripts" &&
+      uv sync --frozen &&
+      uv run ruff check . &&
+      uv run mypy &&
+      uv run pytest -q
   )
 }
 
 run_pulsewire() {
   (
-    cd "$REPO_ROOT/pulsewire-news"
-    ./gradlew check --no-daemon -q
+    cd "$REPO_ROOT/pulsewire-news" &&
+      ./gradlew check --no-daemon -q
   )
 }
 
 run_ledgerline() {
   (
-    cd "$REPO_ROOT/ledgerline-private"
+    cd "$REPO_ROOT/ledgerline-private" || exit 1
     if [ ! -d .venv ]; then
-      uv venv --python 3.12 .venv
+      uv venv --python 3.12 .venv || exit 1
     fi
-    uv pip install --python .venv/bin/python -r requirements-dev.txt
-    .venv/bin/ruff check .
-    .venv/bin/mypy
-    .venv/bin/pytest -q
+    uv pip install --python .venv/bin/python -r requirements-dev.txt &&
+      .venv/bin/ruff check . &&
+      .venv/bin/mypy &&
+      .venv/bin/pytest -q
   )
 }
 
