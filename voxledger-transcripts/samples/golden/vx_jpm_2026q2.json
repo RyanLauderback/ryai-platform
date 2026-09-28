@@ -1,0 +1,103 @@
+{
+  "callId": "vx_jpm_2026q2",
+  "tickerSymbol": "JPM",
+  "exchange": "NYSE",
+  "companyName": "JPMorgan Chase",
+  "eventDate": 1783987200000,
+  "fiscalQuarter": "Q2 FY26",
+  "speakers": [
+    {
+      "speakerId": "spk_0",
+      "name": "Sam Osei",
+      "role": "Operator",
+      "affiliation": "VoxLedger"
+    },
+    {
+      "speakerId": "spk_1",
+      "name": "Renee Kowalski",
+      "role": "Head of Investor Relations",
+      "affiliation": "JPMorgan Chase"
+    },
+    {
+      "speakerId": "spk_2",
+      "name": "Andrew Wynn",
+      "role": "Chairman and CEO",
+      "affiliation": "JPMorgan Chase"
+    },
+    {
+      "speakerId": "spk_3",
+      "name": "Laura Chen",
+      "role": "CFO",
+      "affiliation": "JPMorgan Chase"
+    },
+    {
+      "speakerId": "spk_4",
+      "name": "Elena Vasquez",
+      "role": "Analyst",
+      "affiliation": "Hartwell Capital"
+    }
+  ],
+  "segments": [
+    {
+      "speakerId": "spk_0",
+      "startMs": 0,
+      "endMs": 38000,
+      "section": "PREPARED_REMARKS",
+      "text": "Good morning, and welcome to the JPMorgan Chase second quarter 2026 earnings call. Today's call is being recorded. I will now turn the call over to Renee Kowalski, Head of Investor Relations."
+    },
+    {
+      "speakerId": "spk_1",
+      "startMs": 38000,
+      "endMs": 75000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thank you, Sam. Joining me are Andrew Wynn, our Chairman and Chief Executive Officer, and Laura Chen, our Chief Financial Officer. As a reminder, today's presentation contains forward-looking statements. Andrew?"
+    },
+    {
+      "speakerId": "spk_2",
+      "startMs": 75000,
+      "endMs": 270000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thank you, Renee. We reported net income of 15.1 billion dollars on revenue of 46.8 billion dollars, with record fees in markets and steady growth in payments. Credit performance remained in line with our expectations across consumer and wholesale portfolios."
+    },
+    {
+      "speakerId": "spk_3",
+      "startMs": 270000,
+      "endMs": 595000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thanks, Andrew. Net interest income came in at 23.9 billion dollars, roughly flat sequentially, and card spend grew 7 percent year over year. The efficiency ratio for the quarter was 52 percent. Turning to capital, our CET1 ratio ended the quarter at 15.3 percent, and we announced an increase in the quarterly dividend to 1.40 dollars per share, subject to board approval in the third quarter."
+    },
+    {
+      "speakerId": "spk_0",
+      "startMs": 595000,
+      "endMs": 620000,
+      "section": "QA",
+      "text": "That concludes the prepared remarks. We will now begin the question-and-answer session. Our first question comes from Elena Vasquez with Hartwell Capital. Please go ahead."
+    },
+    {
+      "speakerId": "spk_4",
+      "startMs": 620000,
+      "endMs": 760000,
+      "section": "QA",
+      "text": "Thanks, and good morning. Laura, can you frame your exposure to data-center construction lending, particularly for utility counterparties such as (NYSE: NEE), and how you are thinking about concentration limits there?"
+    },
+    {
+      "speakerId": "spk_3",
+      "startMs": 760000,
+      "endMs": 830000,
+      "section": "QA",
+      "text": "Happy to, Elena. Our project-finance book in that space is high quality and well diversified by region and offtaker, and the utility exposures are predominantly investment grade. Concentration limits are reviewed quarterly and remain comfortably inside our risk appetite."
+    },
+    {
+      "speakerId": "spk_0",
+      "startMs": 830000,
+      "endMs": 845000,
+      "section": "QA",
+      "text": "That concludes today's call. Thank you for joining. You may now disconnect."
+    }
+  ],
+  "mentionedTickers": [
+    "NEE"
+  ],
+  "provider": "voxledger-asr-v3",
+  "schemaVersion": 3
+}

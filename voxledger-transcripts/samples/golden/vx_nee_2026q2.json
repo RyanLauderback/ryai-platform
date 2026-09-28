@@ -1,0 +1,103 @@
+{
+  "callId": "vx_nee_2026q2",
+  "tickerSymbol": "NEE",
+  "exchange": "NYSE",
+  "companyName": "NextEra Energy",
+  "eventDate": 1784764800000,
+  "fiscalQuarter": "Q2 FY26",
+  "speakers": [
+    {
+      "speakerId": "spk_0",
+      "name": "Mia Torres",
+      "role": "Operator",
+      "affiliation": "VoxLedger"
+    },
+    {
+      "speakerId": "spk_1",
+      "name": "Paul Andersen",
+      "role": "Head of Investor Relations",
+      "affiliation": "NextEra Energy"
+    },
+    {
+      "speakerId": "spk_2",
+      "name": "Rebecca Hall",
+      "role": "CEO",
+      "affiliation": "NextEra Energy"
+    },
+    {
+      "speakerId": "spk_3",
+      "name": "James Liu",
+      "role": "CFO",
+      "affiliation": "NextEra Energy"
+    },
+    {
+      "speakerId": "spk_4",
+      "name": "Chris Novak",
+      "role": "Analyst",
+      "affiliation": "Cascadia Partners"
+    }
+  ],
+  "segments": [
+    {
+      "speakerId": "spk_0",
+      "startMs": 0,
+      "endMs": 32000,
+      "section": "PREPARED_REMARKS",
+      "text": "Good morning, and welcome to the NextEra Energy second quarter 2026 earnings conference call. All participants will be in listen-only mode during management's remarks. I will now turn the call over to Paul Andersen, Head of Investor Relations."
+    },
+    {
+      "speakerId": "spk_1",
+      "startMs": 32000,
+      "endMs": 70000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thank you, Mia. With me today are Rebecca Hall, Chair and Chief Executive Officer, and James Liu, Executive Vice President and Chief Financial Officer. Today's discussion includes forward-looking statements. Rebecca, please go ahead."
+    },
+    {
+      "speakerId": "spk_2",
+      "startMs": 70000,
+      "endMs": 300000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thank you, Paul. We delivered adjusted earnings of 1.08 dollars per share, up 9 percent from the prior year, and we placed 2.9 gigawatts of new renewables and storage into service during the quarter, a record for the business."
+    },
+    {
+      "speakerId": "spk_3",
+      "startMs": 300000,
+      "endMs": 500000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thanks, Rebecca. Our regulated utility segment grew earnings 7 percent year over year, and the backlog of signed renewables contracts now stands at 28.5 gigawatts. We are reaffirming our full-year adjusted earnings per share guidance of 4.10 to 4.32 dollars."
+    },
+    {
+      "speakerId": "spk_0",
+      "startMs": 500000,
+      "endMs": 528000,
+      "section": "QA",
+      "text": "That concludes the prepared remarks. We will now begin the question-and-answer session. Our first question comes from Chris Novak with Cascadia Partners. Please go ahead."
+    },
+    {
+      "speakerId": "spk_4",
+      "startMs": 528000,
+      "endMs": 655000,
+      "section": "QA",
+      "text": "Good morning. James, on financing the record build-out, how much of the planned issuance is already pre-funded, and are you seeing better terms from bank partners such as $JPM this year?"
+    },
+    {
+      "speakerId": "spk_2",
+      "startMs": 655000,
+      "endMs": 750000,
+      "section": "QA",
+      "text": "Thanks, Chris. We entered the second half with the large majority of our equity needs for the year already satisfied, and credit markets have been constructive for investment-grade utilities. We continue to ladder maturities and feel good about our funding position."
+    },
+    {
+      "speakerId": "spk_0",
+      "startMs": 750000,
+      "endMs": 820000,
+      "section": "QA",
+      "text": "That concludes today's conference call. Thank you for your participation. You may now disconnect."
+    }
+  ],
+  "mentionedTickers": [
+    "JPM"
+  ],
+  "provider": "voxledger-asr-v3",
+  "schemaVersion": 3
+}
