@@ -26,8 +26,8 @@ jobs:
           fetch-depth: 0
 
       - name: Run Droid
-        uses: Factory-AI/droid-action@latest
+        uses: Factory-AI/droid-action@v8
         with:
           factory_api_key: ${{ secrets.FACTORY_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          enable_security_review: true
+          automatic_security_review: true
