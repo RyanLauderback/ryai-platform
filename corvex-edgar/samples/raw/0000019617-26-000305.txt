@@ -1,0 +1,53 @@
+<SEC-DOCUMENT>0000019617-26-000305.txt : 20260804
+<SEC-HEADER>0000019617-26-000305.hdr.sgml : 20260804
+ACCESSION NUMBER:		0000019617-26-000305
+CONFORMED SUBMISSION TYPE:	10-Q
+FILED AS OF DATE:		20260804
+CONFORMED PERIOD OF REPORT:	20260630
+
+FILER:
+
+	COMPANY DATA:
+		COMPANY CONFORMED NAME:			JPMORGAN CHASE & CO
+		CENTRAL INDEX KEY:			0000019617
+		STANDARD INDUSTRIAL CLASSIFICATION:	NATIONAL COMMERCIAL BANKS [6021]
+		FISCAL YEAR END:			1231
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>10-Q
+<SEQUENCE>1
+<FILENAME>jpm-20260630x10q.htm
+<TEXT>
+
+PART I - FINANCIAL INFORMATION
+
+Item 1. Financial Statements
+
+The unaudited consolidated financial statements of the firm as of June 30, 2026 and for the
+three and six months then ended are included herein, together with the notes thereto. In the
+opinion of management, all adjustments necessary for a fair presentation have been made.
+
+Item 2. Management's Discussion and Analysis of Financial Condition and Results of Operations
+
+The firm reported net income of 14.9 billion for the second quarter of 2026, with net
+interest income modestly higher as loan growth offset narrower deposit spreads. Markets
+revenue rose 11 percent on stronger activity in rates and currencies. The provision for
+credit losses was 2.1 billion, reflecting a stable consumer credit environment and a small
+reserve build in wholesale lending. The common equity tier 1 capital ratio was 15.8 percent.
+
+Item 3. Quantitative and Qualitative Disclosures About Market Risk
+
+The firm's market risk profile was broadly unchanged during the quarter. Average value at
+risk for the trading portfolio was within the range disclosed in the most recent annual
+report, and stress loss estimates remained within established limits.
+
+PART II - OTHER INFORMATION
+
+Item 1A. Risk Factors
+
+There have been no material changes to the risk factors previously disclosed in the firm's
+annual report for the year ended December 31, 2025.
+
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

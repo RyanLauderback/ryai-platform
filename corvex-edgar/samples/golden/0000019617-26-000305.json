@@ -1,0 +1,43 @@
+{
+  "filing" : {
+    "accession_no" : "0000019617-26-000305",
+    "cik" : "0000019617",
+    "company_name" : "JPMORGAN CHASE & CO",
+    "form_type" : "10-Q",
+    "period_of_report" : "2026-06-30",
+    "filed_date" : "2026-08-04",
+    "fiscal_year" : 2026,
+    "fiscal_period" : "Q2",
+    "raw_uri" : "s3://corvex-edgar-raw/0000019617/0000019617-26-000305.txt",
+    "ingest_batch_id" : "edgar-20260927-01"
+  },
+  "filing_section" : [ {
+    "accession_no" : "0000019617-26-000305",
+    "seq" : 1,
+    "section_code" : "PART_I_ITEM_1",
+    "section_title" : "Financial Statements",
+    "char_count" : 303,
+    "text" : "Item 1. Financial Statements\n\nThe unaudited consolidated financial statements of the firm as of June 30, 2026 and for the\nthree and six months then ended are included herein, together with the notes thereto. In the\nopinion of management, all adjustments necessary for a fair presentation have been made."
+  }, {
+    "accession_no" : "0000019617-26-000305",
+    "seq" : 2,
+    "section_code" : "PART_I_ITEM_2",
+    "section_title" : "Management's Discussion and Analysis of Financial Condition and Results of Operations",
+    "char_count" : 540,
+    "text" : "Item 2. Management's Discussion and Analysis of Financial Condition and Results of Operations\n\nThe firm reported net income of 14.9 billion for the second quarter of 2026, with net\ninterest income modestly higher as loan growth offset narrower deposit spreads. Markets\nrevenue rose 11 percent on stronger activity in rates and currencies. The provision for\ncredit losses was 2.1 billion, reflecting a stable consumer credit environment and a small\nreserve build in wholesale lending. The common equity tier 1 capital ratio was 15.8 percent."
+  }, {
+    "accession_no" : "0000019617-26-000305",
+    "seq" : 3,
+    "section_code" : "PART_I_ITEM_3",
+    "section_title" : "Quantitative and Qualitative Disclosures About Market Risk",
+    "char_count" : 315,
+    "text" : "Item 3. Quantitative and Qualitative Disclosures About Market Risk\n\nThe firm's market risk profile was broadly unchanged during the quarter. Average value at\nrisk for the trading portfolio was within the range disclosed in the most recent annual\nreport, and stress loss estimates remained within established limits."
+  }, {
+    "accession_no" : "0000019617-26-000305",
+    "seq" : 4,
+    "section_code" : "PART_II_ITEM_1A",
+    "section_title" : "Risk Factors",
+    "char_count" : 165,
+    "text" : "Item 1A. Risk Factors\n\nThere have been no material changes to the risk factors previously disclosed in the firm's\nannual report for the year ended December 31, 2025."
+  } ]
+}

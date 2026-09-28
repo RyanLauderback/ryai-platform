@@ -1,0 +1,38 @@
+<SEC-DOCUMENT>0001318605-26-000077.txt : 20260916
+<SEC-HEADER>0001318605-26-000077.hdr.sgml : 20260916
+ACCESSION NUMBER:		0001318605-26-000077
+CONFORMED SUBMISSION TYPE:	8-K
+FILED AS OF DATE:		20260916
+CONFORMED PERIOD OF REPORT:	20260915
+
+FILER:
+
+	COMPANY DATA:
+		COMPANY CONFORMED NAME:			TESLA, INC.
+		CENTRAL INDEX KEY:			0001318605
+		STANDARD INDUSTRIAL CLASSIFICATION:	MOTOR VEHICLES AND PASSENGER CAR BODIES [3711]
+		FISCAL YEAR END:			1231
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>8-K
+<SEQUENCE>1
+<FILENAME>tsla-20260915x8k.htm
+<TEXT>
+
+Item 8.01 Other Events
+
+On September 15, 2026, the registrant announced that its energy storage deployments for the
+third quarter reached a record level, and that construction of its second grid-scale battery
+factory remains on schedule for initial production in early 2027. The registrant also
+announced a planned expansion of its charging network along two additional interstate
+corridors. The press release is furnished as an exhibit to this report.
+
+Item 9.01 Financial Statements and Exhibits
+
+The following exhibit is furnished with this current report: Exhibit 99.1, press release
+dated September 15, 2026, announcing energy storage deployment results and network
+expansion plans.
+
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

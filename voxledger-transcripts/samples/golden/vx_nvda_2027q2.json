@@ -1,0 +1,104 @@
+{
+  "callId": "vx_nvda_2027q2",
+  "tickerSymbol": "NVDA",
+  "exchange": "NASDAQ",
+  "companyName": "Nvidia",
+  "eventDate": 1787702400000,
+  "fiscalQuarter": "Q2 FY27",
+  "speakers": [
+    {
+      "speakerId": "spk_0",
+      "name": "Dana Cole",
+      "role": "Operator",
+      "affiliation": "VoxLedger"
+    },
+    {
+      "speakerId": "spk_1",
+      "name": "Maria Chen",
+      "role": "Head of Investor Relations",
+      "affiliation": "Nvidia"
+    },
+    {
+      "speakerId": "spk_2",
+      "name": "Jensen Ward",
+      "role": "CEO",
+      "affiliation": "Nvidia"
+    },
+    {
+      "speakerId": "spk_3",
+      "name": "Colette Ramos",
+      "role": "CFO",
+      "affiliation": "Nvidia"
+    },
+    {
+      "speakerId": "spk_4",
+      "name": "Priya Raman",
+      "role": "Analyst",
+      "affiliation": "Meridian Securities"
+    }
+  ],
+  "segments": [
+    {
+      "speakerId": "spk_0",
+      "startMs": 0,
+      "endMs": 41000,
+      "section": "PREPARED_REMARKS",
+      "text": "Good day, and welcome to the Nvidia second quarter fiscal 2027 earnings conference call. At this time, all participants are in a listen-only mode. I would now like to turn the call over to Maria Chen, Head of Investor Relations. Please go ahead."
+    },
+    {
+      "speakerId": "spk_1",
+      "startMs": 41000,
+      "endMs": 98000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thank you, Dana. Joining me today are Jensen Ward, our President and Chief Executive Officer, and Colette Ramos, our Chief Financial Officer. Today's comments include forward-looking statements, and actual results may differ materially. With that, let me hand the call to Jensen."
+    },
+    {
+      "speakerId": "spk_2",
+      "startMs": 98000,
+      "endMs": 472000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thanks, Maria. We delivered another record quarter, with revenue of 61.2 billion dollars, up 74 percent from a year ago, driven by exceptional demand for our accelerated computing platform across cloud providers and enterprises. Demand for our newest data-center systems continues to outpace supply, and we are ramping capacity with our manufacturing partners through the second half of the fiscal year. We also saw strong early traction for our inference software stack, which more than doubled its attached rate quarter over quarter."
+    },
+    {
+      "speakerId": "spk_3",
+      "startMs": 472000,
+      "endMs": 680000,
+      "section": "PREPARED_REMARKS",
+      "text": "Thanks, Jensen. Gross margin came in at 74.8 percent, up 120 basis points sequentially, and operating income reached 41.6 billion dollars. We returned 9.8 billion dollars to shareholders through repurchases and dividends during the quarter, and we exited the quarter with 58.4 billion dollars in cash and marketable securities."
+    },
+    {
+      "speakerId": "spk_0",
+      "startMs": 680000,
+      "endMs": 707000,
+      "section": "QA",
+      "text": "That concludes management's prepared remarks. We will now begin the question-and-answer session. Our first question comes from Priya Raman with Meridian Securities. Please go ahead."
+    },
+    {
+      "speakerId": "spk_4",
+      "startMs": 707000,
+      "endMs": 795000,
+      "section": "QA",
+      "text": "Thanks for taking my question. As hyperscalers diversify their accelerator fleets, how do you see your share trending relative to merchant silicon at $TSLA suppliers and custom programs at (NASDAQ: MSFT), and does that change your pricing posture into fiscal 2028?"
+    },
+    {
+      "speakerId": "spk_2",
+      "startMs": 795000,
+      "endMs": 902000,
+      "section": "QA",
+      "text": "Great question, Priya. The computing platform shift is so large that demand across every segment remains supply constrained. Our focus is on ramping supply and deepening the software ecosystem rather than on any single competitive dynamic, and we feel very good about our position."
+    },
+    {
+      "speakerId": "spk_0",
+      "startMs": 902000,
+      "endMs": 990000,
+      "section": "QA",
+      "text": "That concludes today's conference call. Thank you for joining us. You may now disconnect."
+    }
+  ],
+  "mentionedTickers": [
+    "TSLA",
+    "MSFT"
+  ],
+  "provider": "voxledger-asr-v3",
+  "schemaVersion": 3
+}

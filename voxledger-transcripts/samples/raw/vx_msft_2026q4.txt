@@ -1,0 +1,53 @@
+VOXLEDGER ASR TRANSCRIPT
+PROVIDER: voxledger-asr-v3
+CALL-ID: vx_msft_2026q4
+COMPANY: Microsoft
+TICKER: MSFT
+EXCHANGE: NASDAQ
+EVENT-DATE: 2026-07-28
+FISCAL-QUARTER: Q4 FY26
+DURATION: 00:15:20
+
+[00:00:00] Ryan Doyle (Operator, VoxLedger):
+Good afternoon, and welcome to the Microsoft fourth quarter fiscal 2026
+earnings conference call. All lines have been placed on mute to prevent
+background noise. I will now turn the call over to Dana Whitfield, Head of
+Investor Relations.
+
+[00:00:35] Dana Whitfield (Head of Investor Relations, Microsoft):
+Thank you, Ryan. On the call today are Marcus Bell, Chairman and Chief
+Executive Officer, and Ellen Park, Chief Financial Officer. Our remarks
+today include forward-looking statements, which involve risks and
+uncertainties. Marcus, over to you.
+
+[00:01:22] Marcus Bell (CEO, Microsoft):
+Thank you, Dana. We closed the fiscal year with strong momentum: total
+revenue of 76.4 billion dollars, up 18 percent year over year, and cloud
+revenue surpassed 45 billion dollars for the first time as customers
+continue to consolidate workloads onto our platform.
+
+[00:05:10] Ellen Park (CFO, Microsoft):
+Thanks, Marcus. Operating income grew 21 percent to 34.9 billion dollars,
+and earnings per share came in at 3.42 dollars, ahead of our guidance range.
+Capital expenditures were 24.1 billion dollars in the quarter as we added
+data-center capacity to meet AI demand.
+
+[00:09:45] Ryan Doyle (Operator, VoxLedger):
+Management's prepared remarks are now complete. We will now open the lines
+for questions. Our first question comes from Tom Okafor with Beacon Hill
+Research. Please go ahead.
+
+[00:10:12] Tom Okafor (Analyst, Beacon Hill Research):
+Thank you. Ellen, can you talk about supply constraints for accelerators and
+how dependent the capacity build remains on $NVDA allocations versus your
+own custom silicon ramp?
+
+[00:12:30] Marcus Bell (CEO, Microsoft):
+We are adding capacity across every layer of the stack, Tom, and our custom
+silicon program gives us more flexibility in how we serve inference demand.
+We expect supply and demand to come into better balance as we move through
+the coming fiscal year.
+
+[00:14:05] Ryan Doyle (Operator, VoxLedger):
+That concludes today's call. Thank you for your participation. You may now
+disconnect.

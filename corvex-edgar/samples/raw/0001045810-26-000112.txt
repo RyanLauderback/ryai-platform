@@ -1,0 +1,60 @@
+<SEC-DOCUMENT>0001045810-26-000112.txt : 20260827
+<SEC-HEADER>0001045810-26-000112.hdr.sgml : 20260827
+ACCESSION NUMBER:		0001045810-26-000112
+CONFORMED SUBMISSION TYPE:	10-Q
+FILED AS OF DATE:		20260827
+CONFORMED PERIOD OF REPORT:	20260726
+
+FILER:
+
+	COMPANY DATA:
+		COMPANY CONFORMED NAME:			NVIDIA CORP
+		CENTRAL INDEX KEY:			0001045810
+		STANDARD INDUSTRIAL CLASSIFICATION:	SEMICONDUCTORS [3674]
+		FISCAL YEAR END:			0126
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>10-Q
+<SEQUENCE>1
+<FILENAME>nvda-20260726x10q.htm
+<TEXT>
+
+PART I - FINANCIAL INFORMATION
+
+Item 1. Financial Statements
+
+The condensed consolidated balance sheets as of July 26, 2026 and January 25, 2026, and the
+related condensed consolidated statements of income for the quarter then ended, are included
+herein. These statements are unaudited and reflect all adjustments that management considers
+necessary for a fair statement of the periods presented.
+
+Item 2. Management's Discussion and Analysis of Financial Condition and Results of Operations
+
+Revenue for the second quarter of fiscal 2027 was 41.3 billion, up 19 percent from a year
+earlier, driven by demand for accelerated computing platforms across cloud and sovereign
+customers. Data center revenue grew 24 percent year over year, while gaming revenue was
+roughly flat. Gross margin was 71.2 percent, down 40 basis points sequentially on product
+mix. Operating expenses rose as the company ramped production of its next-generation
+accelerators and expanded its systems software organization.
+
+Item 3. Quantitative and Qualitative Disclosures About Market Risk
+
+The company is exposed to interest rate risk on its investment portfolio and to foreign
+currency exchange risk on sales denominated in currencies other than the U.S. dollar. A
+hypothetical 10 percent movement in exchange rates would not have a material impact on
+results. There were no material changes to the market risk disclosures in the most recent
+annual report.
+
+PART II - OTHER INFORMATION
+
+Item 1A. Risk Factors
+
+Supply of advanced packaging capacity remains concentrated among a small number of vendors,
+and any disruption could delay shipments of the company's data center products. Export
+control regulations continue to evolve, and additional restrictions could reduce addressable
+demand in certain regions. Customer concentration also remains elevated, with the top four
+cloud customers representing a significant share of data center revenue.
+
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

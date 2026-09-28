@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.corvex</groupId>
+    <artifactId>corvex-edgar-parent</artifactId>
+    <version>8.2.0</version>
+  </parent>
+
+  <artifactId>vendor-stubs</artifactId>
+  <packaging>jar</packaging>
+
+  <name>vendor-stubs</name>
+  <description>
+    Compile-only mirrors of the Spark 3.5 and AWS SDK v2 (S3) APIs used by edgar-core.
+    The cluster and the AWS SDK are supplied by the runtime environment; nothing here
+    is ever executed or packaged into a deployable artifact.
+  </description>
+</project>

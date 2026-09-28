@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: voxledger-transcripts-config
+  namespace: voxledger
+  labels:
+    app.kubernetes.io/part-of: voxledger-transcripts
+data:
+  VOXLEDGER_GCS_BUCKET: voxledger-transcripts-prod
+  VOXLEDGER_MYSQL_URL: >-
+    mysql+pymysql://voxledger:changeme@voxledger-mysql.internal:3306/voxledger
+  DAGSTER_GRPC_TIMEOUT_SECONDS: "60"

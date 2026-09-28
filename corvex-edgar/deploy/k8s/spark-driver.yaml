@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edgar-spark-driver
+  namespace: corvex-edgar
+  labels:
+    app.kubernetes.io/part-of: corvex-edgar
+data:
+  spark.driver.memory: "2g"
+  spark.driver.cores: "1"
+  spark.executor.memory: "4g"
+  spark.executor.cores: "2"
+  spark.executor.instances: "4"
+  spark.kubernetes.namespace: corvex-edgar
+  spark.kubernetes.authenticate.driver.serviceAccountName: edgar-worker
+  spark.hadoop.fs.s3a.aws.credentials.provider: com.amazonaws.auth.DefaultAWSCredentialsProviderChain

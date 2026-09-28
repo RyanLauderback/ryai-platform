@@ -1,0 +1,62 @@
+VOXLEDGER ASR TRANSCRIPT
+PROVIDER: voxledger-asr-v3
+CALL-ID: vx_nvda_2027q2
+COMPANY: Nvidia
+TICKER: NVDA
+EXCHANGE: NASDAQ
+EVENT-DATE: 2026-08-26
+FISCAL-QUARTER: Q2 FY27
+DURATION: 00:16:30
+
+[00:00:00] Dana Cole (Operator, VoxLedger):
+Good day, and welcome to the Nvidia second quarter fiscal 2027 earnings
+conference call. At this time, all participants are in a listen-only mode.
+I would now like to turn the call over to Maria Chen, Head of Investor
+Relations. Please go ahead.
+
+[00:00:41] Maria Chen (Head of Investor Relations, Nvidia):
+Thank you, Dana. Joining me today are Jensen Ward, our President and Chief
+Executive Officer, and Colette Ramos, our Chief Financial Officer. Today's
+comments include forward-looking statements, and actual results may differ
+materially. With that, let me hand the call to Jensen.
+
+[00:01:38] Jensen Ward (CEO, Nvidia):
+Thanks, Maria. We delivered another record quarter, with revenue of 61.2
+billion dollars, up 74 percent from a year ago, driven by exceptional demand
+for our accelerated computing platform across cloud providers and
+enterprises.
+
+[00:04:05] Jensen Ward (CEO, Nvidia):
+Demand for our newest data-center systems continues to outpace supply, and
+we are ramping capacity with our manufacturing partners through the second
+half of the fiscal year. We also saw strong early traction for our inference
+software stack, which more than doubled its attached rate quarter over
+quarter.
+
+[00:07:52] Colette Ramos (CFO, Nvidia):
+Thanks, Jensen. Gross margin came in at 74.8 percent, up 120 basis points
+sequentially, and operating income reached 41.6 billion dollars. We returned
+9.8 billion dollars to shareholders through repurchases and dividends during
+the quarter, and we exited the quarter with 58.4 billion dollars in cash and
+marketable securities.
+
+[00:11:20] Dana Cole (Operator, VoxLedger):
+That concludes management's prepared remarks. We will now begin the
+question-and-answer session. Our first question comes from Priya Raman with
+Meridian Securities. Please go ahead.
+
+[00:11:47] Priya Raman (Analyst, Meridian Securities):
+Thanks for taking my question. As hyperscalers diversify their accelerator
+fleets, how do you see your share trending relative to merchant silicon at
+$TSLA suppliers and custom programs at (NASDAQ: MSFT), and does that change
+your pricing posture into fiscal 2028?
+
+[00:13:15] Jensen Ward (CEO, Nvidia):
+Great question, Priya. The computing platform shift is so large that demand
+across every segment remains supply constrained. Our focus is on ramping
+supply and deepening the software ecosystem rather than on any single
+competitive dynamic, and we feel very good about our position.
+
+[00:15:02] Dana Cole (Operator, VoxLedger):
+That concludes today's conference call. Thank you for joining us. You may
+now disconnect.
